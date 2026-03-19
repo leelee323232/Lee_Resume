@@ -9,7 +9,6 @@ export default function Navigation() {
 
   const navItems = [
     { label: '履歷', href: '/' },
-    { label: '作品集', href: '/portfolio' },
   ]
 
   return (

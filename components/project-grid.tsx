@@ -2,6 +2,15 @@
 
 import { useState } from 'react'
 
+const categoryGradients: Record<string, string> = {
+  '教育科技': 'from-blue-500/20 to-cyan-500/20',
+  '資料科學': 'from-violet-500/20 to-purple-500/20',
+  '跨領域研究': 'from-emerald-500/20 to-teal-500/20',
+  '活動企劃': 'from-orange-500/20 to-amber-500/20',
+  '硬體創業': 'from-rose-500/20 to-pink-500/20',
+  '社團領導': 'from-green-500/20 to-lime-500/20',
+}
+
 export default function ProjectGrid() {
   const projects = [
     {
@@ -9,7 +18,6 @@ export default function ProjectGrid() {
       category: '教育科技',
       description: '為零基礎學生設計的完整區塊鏈教育課程，涵蓋基礎概念、實作操作與生態應用。',
       tags: ['教學設計', '區塊鏈', '課程規劃'],
-      image: '/blockchain-education-course.jpg',
       achievements: ['覆蓋100+學生', '8堂結構化課程', '95%滿意度']
     },
     {
@@ -17,7 +25,6 @@ export default function ProjectGrid() {
       category: '資料科學',
       description: '應用K-means聚類算法對歷史數據進行深度分析，建立數據可視化與預測模型。',
       tags: ['Python', '機器學習', '資料視覺化'],
-      image: '/data-science-analysis.jpg',
       achievements: ['聚類準確率92%', '3種模型比較', '完整報告交付']
     },
     {
@@ -25,7 +32,6 @@ export default function ProjectGrid() {
       category: '跨領域研究',
       description: '整合生涯心理學、生成式AI與焦慮調節的跨學科研究項目，設計創新研究框架。',
       tags: ['研究設計', '生成式AI', '心理學'],
-      image: '/research-ai-psychology.jpg',
       achievements: ['論文發表', '跨校合作', '創新框架']
     },
     {
@@ -33,7 +39,6 @@ export default function ProjectGrid() {
       category: '活動企劃',
       description: '主企劃跨校區塊鏈社團聯合舉辦的大型推廣活動，成功吸引300+參與者。',
       tags: ['活動管理', '場景設計', '社群推廣'],
-      image: '/event-planning-conference.jpg',
       achievements: ['300+參與者', '完美執行', '媒體報導']
     },
     {
@@ -41,7 +46,6 @@ export default function ProjectGrid() {
       category: '硬體創業',
       description: '整合呼吸感測、溫控與IoT晶片的創新穿戴產品，完成從概念到企劃書的全流程。',
       tags: ['產品設計', '創業', '硬體整合'],
-      image: '/smart-wearable-product.jpg',
       achievements: ['創業計畫書', '創業競賽參選', '原型設計完成']
     },
     {
@@ -49,18 +53,15 @@ export default function ProjectGrid() {
       category: '社團領導',
       description: '創立東吳首個永續發展研究社團，整合SDGs目標與校園實踐，建立完整的永續推廣體系。',
       tags: ['社團創立', '永續發展', '領導力'],
-      image: '/sustainability-esg-initiative.jpg',
       achievements: ['社團成立', '30+成員', '多項推廣活動']
     }
   ]
 
-  // Get unique categories
   const categories = ['全部', ...new Set(projects.map(p => p.category))]
   const [selectedCategory, setSelectedCategory] = useState('全部')
 
-  // Filter projects by category
-  const filteredProjects = selectedCategory === '全部' 
-    ? projects 
+  const filteredProjects = selectedCategory === '全部'
+    ? projects
     : projects.filter(p => p.category === selectedCategory)
 
   return (
@@ -93,13 +94,9 @@ export default function ProjectGrid() {
               key={index}
               className="group rounded-xl overflow-hidden border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-lg"
             >
-              {/* Project Image */}
-              <div className="aspect-video overflow-hidden bg-secondary/10">
-                <img
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+              {/* Category Banner */}
+              <div className={`aspect-video bg-gradient-to-br ${categoryGradients[project.category] ?? 'from-primary/10 to-primary/20'} flex items-center justify-center`}>
+                <span className="text-2xl font-bold text-foreground/30">{project.category}</span>
               </div>
 
               {/* Project Content */}

@@ -1,4 +1,4 @@
-import { Linkedin, Github } from 'lucide-react'
+import { Linkedin, Instagram } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -6,26 +6,26 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-center md:text-left">
-            <p className="text-sm font-medium text-foreground">© 2025 李科邑</p>
+            <p className="text-sm font-medium text-foreground">© 2026 李科邑</p>
             <p className="text-xs text-foreground/50 mt-2 space-x-2">
-              <span>區塊鏈教育者</span>
+              <span>區塊鏈</span>
               <span className="text-foreground/30">•</span>
-              <span>永續推動者</span>
+              <span>永續</span>
               <span className="text-foreground/30">•</span>
-              <span>活動企劃者</span>
+              <span>AI</span>
             </p>
           </div>
 
           <div className="flex items-center gap-6">
             <a
-              href="mailto:contact@example.com"
+              href="mailto:lik75932@gmail.com"
               className="text-sm text-foreground/60 hover:text-primary transition-colors duration-200"
             >
-              contact@example.com
+              lik75932@gmail.com
             </a>
             <div className="flex items-center gap-3">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/科邑-李-96727b257"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/60 hover:text-primary transition-colors duration-200"
@@ -34,13 +34,13 @@ export default function Footer() {
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
-                href="https://github.com"
+                href="https://www.instagram.com/tonylee0320"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/60 hover:text-primary transition-colors duration-200"
-                aria-label="GitHub"
+                aria-label="Instagram"
               >
-                <Github className="w-4 h-4" />
+                <Instagram className="w-4 h-4" />
               </a>
             </div>
           </div>
