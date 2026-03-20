@@ -6,25 +6,37 @@ export default function Experience() {
       title: '區塊鏈研究實習生',
       company: '博士旺創新股份有限公司',
       period: '2024 - 至今',
-      details: []
+      details:[
+        '研究MPC錢包技術',
+        '製作中文博士旺創新官方網站',
+        '各國區塊鏈相關法規研究',
+      ]
     },
     {
       title: '財務',
       company: 'uCup 杯特股份有限公司',
       period: '2024 - 至今',
-      details: []
+      details: [
+        '公司財務管理',
+        '公司資金運運規畫',
+      ]
     },
     {
       title: 'Bybit 校園大使',
       company: 'Bybit',
       period: '2024 - 至今',
-      details: []
+      details: [
+        '推廣加密貨幣相關知識',
+      ]
     },
     {
       title: '暑期實習 永續實習生',
       company: '思綴有限公司',
       period: '2025',
-      details: []
+      details: [
+        'ISO 14064-1 碳盤查實務',
+        '碳盤查資料盤點整理',
+      ]
     },
   ]
 

@@ -24,7 +24,7 @@ export default function ResearchProjects() {
       tags: ['社工服務', '跨域教學'],
     },
     {
-      title: '去中心化金融應用實作 — 區塊鏈技術與數位資產應用發展計畫',
+      title: '去中心化金融應用實作 — 區塊鏈技術與數位資產應用發展計畫 助教',
       type: '國科會技專校院實務型研究專案計畫',
       period: '2026',
       details: [],

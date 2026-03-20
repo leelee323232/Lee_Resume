@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { Mail, Linkedin, Instagram, ArrowRight } from 'lucide-react'
 
 export default function ResumeHero() {
-  const tags = ['區塊鏈教育', 'ESG 永續', 'AI 研究', '在地關懷']
+  const tags = ['區塊鏈教育', 'ESG 永續', 'AI 研究', '金融科技' ]
 
   return (
     <section className="min-h-[92vh] flex items-center pt-20 pb-16 px-4 md:px-8 bg-gradient-to-br from-primary/8 via-background to-secondary/8">
@@ -34,9 +34,25 @@ export default function ResumeHero() {
             </div>
 
             {/* Description */}
-            <p className="text-base text-foreground/60 max-w-lg leading-loose">
-              專注於區塊鏈教育、資料科學與永續發展領域。以跨領域視角整合技術、教育與社會責任，推動科技普及與應用。
-            </p>
+            <div className="space-y-4 max-w-lg">
+              <p className="text-base text-foreground/60 leading-loose">
+                具備日語、財金與資料科學的跨領域背景，目前就讀東吳大學資料科學系碩士班五年一貫。專注於將 AI 與區塊鏈技術應用於金融科技與永續發展（ESG）領域。
+              </p>
+              <ul className="space-y-2 text-sm text-foreground/60">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 w-1.5 h-1.5 rounded-full bg-primary/60 shrink-0" />
+                  <span><span className="text-foreground/80 font-medium">創業實務：</span>現任 Carcons 碳盤查團隊負責人，開發 AI 碳預測平台</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 w-1.5 h-1.5 rounded-full bg-primary/60 shrink-0" />
+                  <span><span className="text-foreground/80 font-medium">社群領導：</span>東吳 ESG 永續發展研究社創社社長、東吳區塊鏈研究社社長、東吳登山社副社長，榮獲 114 年大專優秀青年代表</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 w-1.5 h-1.5 rounded-full bg-primary/60 shrink-0" />
+                  <span><span className="text-foreground/80 font-medium">教育推廣：</span>與校方合作開設多門微課程，擔任全台首創「Move 智能合約工作坊」課程講師，並與校方合作推廣「東吳大學區塊鏈教育計畫」</span>
+                </li>
+              </ul>
+            </div>
 
             {/* CTA buttons */}
             <div className="flex flex-wrap gap-4 pt-2">
