@@ -1,15 +1,21 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
 
   const navItems = [
     { label: '履歷', href: '/' },
+    { label: '作品集', href: '/portfolio' },
   ]
+
+  const isActive = (href: string) =>
+    href === '/' ? pathname === '/' : pathname.startsWith(href)
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg bg-background/70 border-b border-border">
@@ -25,9 +31,17 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm text-foreground/70 hover:text-foreground transition-colors duration-200 font-medium"
+                aria-current={isActive(item.href) ? 'page' : undefined}
+                className={`relative text-sm font-medium transition-colors duration-200 ${
+                  isActive(item.href)
+                    ? 'text-foreground'
+                    : 'text-foreground/50 hover:text-foreground'
+                }`}
               >
                 {item.label}
+                {isActive(item.href) && (
+                  <span className="absolute -bottom-1.5 left-0 right-0 h-0.5 rounded-full bg-primary" />
+                )}
               </Link>
             ))}
           </div>
@@ -39,11 +53,7 @@ export default function Navigation() {
             aria-label="Toggle menu"
             aria-expanded={isOpen}
           >
-            {isOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
@@ -54,7 +64,11 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block px-4 py-2 text-foreground/70 hover:text-foreground hover:bg-secondary/10 rounded-lg transition-colors duration-200"
+                className={`block px-4 py-2.5 rounded-xl text-sm font-medium transition-colors duration-200 ${
+                  isActive(item.href)
+                    ? 'bg-primary/10 text-primary'
+                    : 'text-foreground/60 hover:text-foreground hover:bg-muted'
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}

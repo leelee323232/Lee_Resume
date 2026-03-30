@@ -6,12 +6,15 @@ import { useState } from 'react'
 export default function ContactMedia() {
   const [copied, setCopied] = useState('')
 
+  const parts = ['lik75990', 'gmail', 'com']
+  const email = `${parts[0]}@${parts[1]}.${parts[2]}`
+
   const contactInfo = [
     {
       label: 'Email',
-      value: 'lik75932@gmail.com',
+      value: email,
       icon: Mail,
-      href: 'mailto:lik75932@gmail.com',
+      href: `mailto:${email}`,
       type: 'email'
     },
     {
@@ -57,7 +60,7 @@ export default function ContactMedia() {
     }
   ]
 
-  const handleCopy = (value, type) => {
+  const handleCopy = (value: string, type: string) => {
     navigator.clipboard.writeText(value)
     setCopied(type)
     setTimeout(() => setCopied(''), 2000)

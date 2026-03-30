@@ -1,4 +1,5 @@
-import { FlaskConical } from 'lucide-react'
+import Link from 'next/link'
+import { FlaskConical, ArrowUpRight } from 'lucide-react'
 
 export default function ResearchProjects() {
   const projects = [
@@ -74,6 +75,15 @@ export default function ResearchProjects() {
                     {tag}
                   </span>
                 ))}
+              </div>
+              <div className="mt-3 pt-3 border-t border-border">
+                <Link
+                  href="/portfolio#research"
+                  className="inline-flex items-center gap-1 text-xs text-primary/70 hover:text-primary font-medium transition-colors duration-200"
+                >
+                  查看作品集
+                  <ArrowUpRight className="w-3 h-3" />
+                </Link>
               </div>
             </div>
           ))}

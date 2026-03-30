@@ -5,7 +5,7 @@ export default function PortfolioHero() {
         <div className="space-y-6">
           <h1 className="text-5xl md:text-6xl font-bold text-foreground">作品集</h1>
           <p className="text-lg text-foreground/60 max-w-3xl leading-relaxed">
-            展示我在區塊鏈教育、資料科學、產品開發與活動企劃等領域的代表作品。每個項目都體現了我對技術創新與社會價值的追求。
+            從校園教育到創業實踐，從學術研究到大型活動策劃——這裡收錄了我在區塊鏈教育推廣、ESG 永續、AI 應用與社群領導等領域的代表性經歷。每個項目背後，都是一次將想法落地、創造真實影響力的嘗試。
           </p>
         </div>
       </div>

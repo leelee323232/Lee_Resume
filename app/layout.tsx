@@ -1,26 +1,11 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: '李科邑 ',
-  description: '專注於區塊鏈教育、研究與永續推動的個人履歷與作品集。區塊鏈社課講者、活動企劃主持人、ESG 永續研究社創立者。',
-  keywords: ['區塊鏈', '教育', '永續', '研究', '李科邑'],
-  openGraph: {
-    title: '李科邑 ',
-    description: '專注於區塊鏈教育、研究與永續推動的個人履歷與作品集',
-    type: 'website',
-  },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-  },
-  generator: 'v0.app',
+  title: '李科邑',
+  description: '李科邑的個人履歷與作品集',
+  robots: { index: false, follow: false },
 }
 
 export default function RootLayout({

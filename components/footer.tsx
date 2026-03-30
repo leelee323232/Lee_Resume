@@ -1,4 +1,5 @@
 import { Linkedin, Instagram } from 'lucide-react'
+import ObfuscatedEmail from '@/components/obfuscated-email'
 
 export default function Footer() {
   return (
@@ -17,12 +18,7 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-6">
-            <a
-              href="mailto:lik75932@gmail.com"
-              className="text-sm text-foreground/60 hover:text-primary transition-colors duration-200"
-            >
-              lik75932@gmail.com
-            </a>
+            <ObfuscatedEmail className="text-sm text-foreground/60 hover:text-primary transition-colors duration-200" />
             <div className="flex items-center gap-3">
               <a
                 href="https://www.linkedin.com/in/科邑-李-96727b257"

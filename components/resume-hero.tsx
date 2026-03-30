@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Mail, Linkedin, Instagram, ArrowRight } from 'lucide-react'
+import ObfuscatedEmail from '@/components/obfuscated-email'
 
 export default function ResumeHero() {
   const tags = ['區塊鏈教育', 'ESG 永續', 'AI 研究', '金融科技' ]
@@ -56,13 +57,12 @@ export default function ResumeHero() {
 
             {/* CTA buttons */}
             <div className="flex flex-wrap gap-4 pt-2">
-              <a
-                href="mailto:lik75932@gmail.com"
+              <ObfuscatedEmail
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-all duration-200 font-medium shadow-sm hover:shadow-md"
               >
                 <Mail className="w-4 h-4" />
                 聯絡我
-              </a>
+              </ObfuscatedEmail>
               <a
                 href="https://www.linkedin.com/in/科邑-李-96727b257"
                 target="_blank"
@@ -87,13 +87,14 @@ export default function ResumeHero() {
           {/* Right: Photo only */}
           <div className="flex justify-center items-center order-1 lg:order-2">
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-3xl overflow-hidden border-4 border-white shadow-2xl bg-muted">
+              <div className="w-64 md:w-80 aspect-[1684/2528] rounded-3xl overflow-hidden border-4 border-white shadow-2xl bg-muted">
                 <Image
                   src="/profile.jpg"
                   alt="李科邑"
-                  width={320}
-                  height={320}
+                  width={1684}
+                  height={2528}
                   className="w-full h-full object-cover"
+                  priority
                   unoptimized
                 />
               </div>

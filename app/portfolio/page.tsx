@@ -1,5 +1,3 @@
-'use client'
-
 import Navigation from '@/components/navigation'
 import PortfolioHero from '@/components/portfolio-hero'
 import ProjectGrid from '@/components/project-grid'

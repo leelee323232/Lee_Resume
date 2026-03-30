@@ -1,5 +1,3 @@
-'use client'
-
 import Navigation from '@/components/navigation'
 import ResumeHero from '@/components/resume-hero'
 import Education from '@/components/education'
