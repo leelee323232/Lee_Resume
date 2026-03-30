@@ -1,19 +1,25 @@
 import { Linkedin, Instagram } from 'lucide-react'
 import ObfuscatedEmail from '@/components/obfuscated-email'
+import type { SiteContent } from '@/lib/i18n'
 
-export default function Footer() {
+interface FooterProps {
+  content: SiteContent['footer']
+}
+
+export default function Footer({ content }: FooterProps) {
   return (
     <footer className="border-t border-border mt-16 py-12 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-center md:text-left">
-            <p className="text-sm font-medium text-foreground">© 2026 李科邑</p>
+            <p className="text-sm font-medium text-foreground">{content.copyright}</p>
             <p className="text-xs text-foreground/50 mt-2 space-x-2">
-              <span>區塊鏈</span>
-              <span className="text-foreground/30">•</span>
-              <span>永續</span>
-              <span className="text-foreground/30">•</span>
-              <span>AI</span>
+              {content.keywords.map((kw, i) => (
+                <span key={i}>
+                  {i > 0 && <span className="text-foreground/30 mr-2">•</span>}
+                  {kw}
+                </span>
+              ))}
             </p>
           </div>
 

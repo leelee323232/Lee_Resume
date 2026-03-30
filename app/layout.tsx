@@ -4,7 +4,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: '李科邑',
-  description: '李科邑的個人履歷與作品集',
+  description: '李科邑的個人履歷與作品集 | Lee Ko-Yi Resume & Portfolio',
   robots: { index: false, follow: false },
 }
 
@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-TW">
-      <body className={`font-sans antialiased`}>
+      <body className="font-sans antialiased">
         {children}
         <Analytics />
       </body>

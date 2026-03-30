@@ -1,143 +1,16 @@
 import Link from 'next/link'
 import { Briefcase, Star, ArrowUpRight } from 'lucide-react'
+import type { SiteContent, Locale } from '@/lib/i18n'
 
-export default function Experience() {
-  const workExperiences = [
-    {
-      title: '區塊鏈研究實習生',
-      company: '博士旺創新股份有限公司',
-      period: '2024 - 至今',
-      portfolioId: 'bosswang',
-      details:[
-        '研究MPC錢包技術',
-        '製作中文博士旺創新官方網站',
-        '各國區塊鏈相關法規研究',
-      ]
-    },
-    {
-      title: '財務',
-      company: 'uCup 杯特股份有限公司',
-      period: '2024 - 至今',
-      portfolioId: 'ucup',
-      details: [
-        '公司財務管理',
-        '公司資金運運規畫',
-      ]
-    },
-    {
-      title: 'Bybit 校園大使',
-      company: 'Bybit',
-      period: '2024 - 至今',
-      details: [
-        '推廣加密貨幣相關知識',
-      ]
-    },
-    {
-      title: '暑期實習 永續實習生',
-      company: '思綴有限公司',
-      period: '2025',
-      details: [
-        'ISO 14064-1 碳盤查實務',
-        '碳盤查資料盤點整理',
-      ]
-    },
-  ]
+interface ExperienceProps {
+  content: SiteContent['experience']
+  locale: Locale
+}
 
-  const campusExperiences = [
-    {
-      title: '東吳ESG永續發展研究社 - 創社社長',
-      company: '東吳大學',
-      period: '2023 - 至今',
-      portfolioId: 'esg-society',
-      details: [
-        '創立東吳首個永續發展相關研究社團',
-        '設定社團願景，結合聯合國SDGs目標',
-        '企劃並執行永續推廣活動與課程推廣',
-      ]
-    },
-    {
-      title: '東吳區塊鏈研究社 - 社長',
-      company: '東吳大學',
-      period: '2022 - 至今',
-      portfolioId: 'blockchain-club',
-      details: [
-        '規劃設計基礎八堂區塊鏈課程，教授零基礎學生',
-        '教學內容涵蓋鏈上操作、DApp、Kaspa、錢包與智能合約概念',
-        '重新設計課程教材為三小時形式，提升教學效率',
-      ]
-    },
-    {
-      title: '東吳登山社 - 副社長',
-      company: '東吳大學',
-      period: '2023',
-      details: [
-        '登山社過夜嚮導',
-        '開設登山過夜隊伍',
-      ]
-    },
-    {
-      title: 'Web3區塊鏈專業知識培養系列課程 - 課程負責人',
-      company: '跨社團聯合',
-      period: '2025年9月- 至今 ',
-      portfolioId: 'web3-course',
-      details: [
-        '與東吳大學人本AI研究中心聯合開設系列課程',
-        '負責課程設計、初級、高級課程規劃等',
-        '證書與獎勵機制設計與執行',
-      ]
-    },
-    {
-      title: '東吳大學教學資源中心 - 開設微課程',
-      company: '東吳大學',
-      period: '2023、2025',
-      portfolioId: 'move-workshop',
-      details: [
-        '「從零開始學習區塊鏈」微課程',
-        '↳為東吳教學資源中心首次與社團合作開立課程，為後續募課微課程打造新典範',
-        '「Move 智能合約工作坊」微課程',
-        '↳為台灣首見由大學開設之一系列專業 Move 智能合約課程，內容涵蓋 Move 語言基礎、智能合約開發與實際部署',
-      ]
-    },
-    {
-      title: '東吳大學教學資源中心 - 微課程授課老師',
-      company: '東吳大學',
-      period: '2023 - 2026',
-      portfolioId: 'micro-courses',
-      details: [
-        '「區塊鏈X永續發展」微課程授課講師',
-        '「鏈上視界：用數據探索區塊鏈」微課程授課講師',
-        '「實質資產代幣化系列課程」微課程授課講師',
-        '「綠色生活實驗室」微課程授課講師',
-      ]
-    },
-    {
-      title: '東吳鏈愛節市集 - 負責人',
-      company: '跨社團聯合',
-      period: '2024年3月、2025年3月',
-      portfolioId: 'chain-festival',
-      details: [
-        '與校內多社團聯合企劃跨校活動',
-        '負責招商、活動流程規劃與現場場控等',
-        '成功舉辦吸引800+參與者的大型推廣活動',
-      ]
-    },
-    {
-      title: '2025 PSBH 國際問題解決松全球挑戰賽 助教',
-      company: '東吳大學生涯發展中心',
-      period: '2025',
-      details: [
-        '指導隊伍取得社會創新組 佳作',
-      ]
-    },
-    {
-      title: '114年大專優秀青年代表',
-      company: '青年救國團',
-      period: '2025',
-      details: []
-    },
-  ]
+export default function Experience({ content, locale }: ExperienceProps) {
+  const portfolioBase = locale === 'zh' ? '/portfolio' : `/${locale}/portfolio`
 
-  const renderCards = (list: typeof workExperiences) => (
+  const renderCards = (list: typeof content.work) => (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
       {list.map((exp, index) => (
         <div
@@ -173,10 +46,10 @@ export default function Experience() {
           {'portfolioId' in exp && exp.portfolioId && (
             <div className="mt-3 pt-3 border-t border-border">
               <Link
-                href={`/portfolio#${exp.portfolioId}`}
+                href={`${portfolioBase}#${exp.portfolioId}`}
                 className="inline-flex items-center gap-1 text-xs text-primary/70 hover:text-primary font-medium transition-colors duration-200"
               >
-                查看作品集
+                {content.viewPortfolio}
                 <ArrowUpRight className="w-3 h-3" />
               </Link>
             </div>
@@ -194,9 +67,9 @@ export default function Experience() {
             <div className="p-2 rounded-xl bg-primary/10">
               <Briefcase className="w-6 h-6 text-primary" />
             </div>
-            <h2 className="text-3xl font-bold text-foreground">工作經驗</h2>
+            <h2 className="text-3xl font-bold text-foreground">{content.workHeading}</h2>
           </div>
-          {renderCards(workExperiences)}
+          {renderCards(content.work)}
         </div>
       </section>
 
@@ -206,9 +79,9 @@ export default function Experience() {
             <div className="p-2 rounded-xl bg-primary/10">
               <Star className="w-6 h-6 text-primary" />
             </div>
-            <h2 className="text-3xl font-bold text-foreground">經驗與成就</h2>
+            <h2 className="text-3xl font-bold text-foreground">{content.campusHeading}</h2>
           </div>
-          {renderCards(campusExperiences)}
+          {renderCards(content.campus)}
         </div>
       </section>
     </>

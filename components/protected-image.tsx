@@ -33,7 +33,7 @@ export default function ProtectedImage() {
             className="absolute text-white/20 text-xs font-medium select-none whitespace-nowrap rotate-[-35deg]"
             style={{ top: `${10 + i * 18}%`, left: '-10%', right: '-10%', textAlign: 'center' }}
           >
-            © 李科邑 leekoi.com &nbsp;&nbsp;&nbsp; © 李科邑 leekoi.com
+            © 李科邑 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; © 李科邑
           </span>
         ))}
       </div>
