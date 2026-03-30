@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import { Mail, Linkedin, Instagram, ArrowRight } from 'lucide-react'
 import ObfuscatedEmail from '@/components/obfuscated-email'
+import ProtectedImage from '@/components/protected-image'
 
 export default function ResumeHero() {
   const tags = ['區塊鏈教育', 'ESG 永續', 'AI 研究', '金融科技' ]
@@ -87,17 +87,7 @@ export default function ResumeHero() {
           {/* Right: Photo only */}
           <div className="flex justify-center items-center order-1 lg:order-2">
             <div className="relative">
-              <div className="w-64 md:w-80 aspect-[1684/2528] rounded-3xl overflow-hidden border-4 border-white shadow-2xl bg-muted">
-                <Image
-                  src="/profile.jpg"
-                  alt="李科邑"
-                  width={1684}
-                  height={2528}
-                  className="w-full h-full object-cover"
-                  priority
-                  unoptimized
-                />
-              </div>
+              <ProtectedImage />
               {/* Decorative rings */}
               <div className="absolute -inset-3 rounded-3xl border-2 border-primary/20 -z-10" />
               <div className="absolute -inset-6 rounded-3xl border border-primary/10 -z-10" />
