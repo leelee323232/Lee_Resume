@@ -8,6 +8,7 @@ import ResearchProjects from '@/components/research-projects'
 import Competitions from '@/components/competitions'
 import Skills from '@/components/skills'
 import ContactMedia from '@/components/contact-media'
+import ContactFormSection from '@/components/contact-form-section'
 import Footer from '@/components/footer'
 import { getContent, type Locale } from '@/lib/i18n'
 
@@ -37,6 +38,7 @@ export default async function LocaleHome({ params }: { params: Promise<{ locale:
       <Competitions content={content.competitions} />
       <Skills content={content.skills} />
       <ContactMedia content={content.contact} />
+      <ContactFormSection content={content.contactForm} locale={locale as Locale} />
       <Footer content={content.footer} />
     </main>
   )

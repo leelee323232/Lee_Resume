@@ -7,6 +7,7 @@ import ResearchProjects from '@/components/research-projects'
 import Competitions from '@/components/competitions'
 import Skills from '@/components/skills'
 import ContactMedia from '@/components/contact-media'
+import ContactFormSection from '@/components/contact-form-section'
 import Footer from '@/components/footer'
 import { zh } from '@/lib/i18n'
 
@@ -27,6 +28,7 @@ export default function Home() {
       <Competitions content={zh.competitions} />
       <Skills content={zh.skills} />
       <ContactMedia content={zh.contact} />
+      <ContactFormSection content={zh.contactForm} locale="zh" />
       <Footer content={zh.footer} />
     </main>
   )

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Briefcase, Star, ArrowUpRight } from 'lucide-react'
+import FadeIn from '@/components/fade-in'
 import type { SiteContent, Locale } from '@/lib/i18n'
 
 interface ExperienceProps {
@@ -15,7 +16,7 @@ export default function Experience({ content, locale }: ExperienceProps) {
       {list.map((exp, index) => (
         <div
           key={index}
-          className="bg-card rounded-2xl p-6 border border-border hover:border-primary/40 hover:shadow-sm transition-all duration-200"
+          className="bg-card rounded-2xl p-6 border border-border hover:border-primary/40 hover:shadow-md hover:-translate-y-1 transition-all duration-200"
         >
           <div className="flex items-start justify-between mb-3">
             <div className="flex-1 min-w-0">
@@ -63,25 +64,29 @@ export default function Experience({ content, locale }: ExperienceProps) {
     <>
       <section className="py-20 px-4 md:px-8 border-t border-border">
         <div className="max-w-6xl mx-auto">
-          <div className="flex items-center gap-3 mb-12">
-            <div className="p-2 rounded-xl bg-primary/10">
-              <Briefcase className="w-6 h-6 text-primary" />
+          <FadeIn>
+            <div className="flex items-center gap-3 mb-12">
+              <div className="p-2 rounded-xl bg-primary/10">
+                <Briefcase className="w-6 h-6 text-primary" />
+              </div>
+              <h2 className="text-3xl font-bold text-foreground">{content.workHeading}</h2>
             </div>
-            <h2 className="text-3xl font-bold text-foreground">{content.workHeading}</h2>
-          </div>
-          {renderCards(content.work)}
+          </FadeIn>
+          <FadeIn delay={80}>{renderCards(content.work)}</FadeIn>
         </div>
       </section>
 
       <section className="py-20 px-4 md:px-8 border-t border-border bg-muted/20">
         <div className="max-w-6xl mx-auto">
-          <div className="flex items-center gap-3 mb-12">
-            <div className="p-2 rounded-xl bg-primary/10">
-              <Star className="w-6 h-6 text-primary" />
+          <FadeIn>
+            <div className="flex items-center gap-3 mb-12">
+              <div className="p-2 rounded-xl bg-primary/10">
+                <Star className="w-6 h-6 text-primary" />
+              </div>
+              <h2 className="text-3xl font-bold text-foreground">{content.campusHeading}</h2>
             </div>
-            <h2 className="text-3xl font-bold text-foreground">{content.campusHeading}</h2>
-          </div>
-          {renderCards(content.campus)}
+          </FadeIn>
+          <FadeIn delay={80}>{renderCards(content.campus)}</FadeIn>
         </div>
       </section>
     </>

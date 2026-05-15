@@ -29,3 +29,9 @@ Thumbs.db
 
 # Misc
 *.log
+
+# Claude Code internal
+.claude/
+
+# Draft content files
+resume.md

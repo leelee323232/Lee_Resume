@@ -8,8 +8,8 @@ interface ContactMediaProps {
   content: SiteContent['contact']
 }
 
-const parts = ['lik75990', 'gmail', 'com']
-const email = `${parts[0]}@${parts[1]}.${parts[2]}`
+const parts = ['koilee', 'works', 'gmail', 'com']
+const email = `${parts[0]}.${parts[1]}@${parts[2]}.${parts[3]}`
 
 export default function ContactMedia({ content }: ContactMediaProps) {
   const [copied, setCopied] = useState(false)

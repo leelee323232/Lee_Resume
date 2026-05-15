@@ -61,16 +61,18 @@ export default function Navigation({ locale, content }: NavigationProps) {
                 key={item.href}
                 href={item.href}
                 aria-current={isActive(item.href) ? 'page' : undefined}
-                className={`relative text-sm font-medium transition-colors duration-200 ${
+                className={`relative text-sm font-medium transition-colors duration-200 pb-1 ${
                   isActive(item.href)
                     ? 'text-foreground'
                     : 'text-foreground/50 hover:text-foreground'
                 }`}
               >
                 {item.label}
-                {isActive(item.href) && (
-                  <span className="absolute -bottom-1.5 left-0 right-0 h-0.5 rounded-full bg-primary" />
-                )}
+                <span
+                  className={`absolute -bottom-0.5 left-0 h-0.5 rounded-full bg-primary transition-all duration-300 ${
+                    isActive(item.href) ? 'w-full' : 'w-0'
+                  }`}
+                />
               </Link>
             ))}
 
@@ -106,7 +108,7 @@ export default function Navigation({ locale, content }: NavigationProps) {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden pt-4 pb-2 border-t border-border mt-4 space-y-1">
+          <div className="md:hidden pt-4 pb-2 border-t border-border mt-4 space-y-1 animate-fade-up" style={{ animationDuration: '0.25s' }}>
             {navItems.map((item) => (
               <Link
                 key={item.href}
