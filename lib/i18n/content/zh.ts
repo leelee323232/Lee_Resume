@@ -345,8 +345,15 @@ export const zh = {
     ],
   },
   contactForm: {
-    heading: '直接與我聯繫',
-    description: '如果你有任何想法、合作機會或建議，我很樂意聽聽。請填寫下方表單，我會盡快回覆。',
+    heading: '歡迎聯絡我',
+    description: '不論是合作提案、實習機會，或只是想聊聊區塊鏈與 AI，都歡迎留下訊息。',
+    reasons: [
+      '合作提案與專案邀約',
+      '實習與求職機會',
+      '研究交流與演講邀約',
+      '單純打個招呼',
+    ],
+    responseTime: '通常 1–2 個工作天內回覆',
     nameLabel: '姓名',
     namePlaceholder: '你的姓名',
     contactLabel: '聯絡方式',

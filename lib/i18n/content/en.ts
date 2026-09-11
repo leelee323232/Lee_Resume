@@ -348,8 +348,15 @@ export const en = {
     ],
   },
   contactForm: {
-    heading: 'Get in Touch',
-    description: 'If you have any ideas, collaboration opportunities, or feedback, I\'d love to hear from you. Fill out the form below and I\'ll get back to you as soon as possible.',
+    heading: "Let’s Get in Touch",
+    description: "Whether it’s a collaboration, an internship opening, or just a chat about blockchain and AI — I’d love to hear from you.",
+    reasons: [
+      'Collaborations and project invitations',
+      'Internship and job opportunities',
+      'Research exchange and speaking invitations',
+      'Just saying hello',
+    ],
+    responseTime: 'I usually reply within 1–2 business days',
     nameLabel: 'Name',
     namePlaceholder: 'Your name',
     contactLabel: 'Contact info',
