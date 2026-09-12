@@ -62,7 +62,7 @@ export default function Experience({ content, locale }: ExperienceProps) {
 
   return (
     <>
-      <section className="py-20 px-4 md:px-8 border-t border-border">
+      <section id="experience" className="scroll-mt-20 py-20 px-4 md:px-8 border-t border-border">
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <div className="flex items-center gap-3 mb-12">

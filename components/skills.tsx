@@ -10,7 +10,7 @@ interface SkillsProps {
 
 export default function Skills({ content }: SkillsProps) {
   return (
-    <section className="py-20 px-4 md:px-8 border-t border-border bg-muted/20">
+    <section id="skills" className="scroll-mt-20 py-20 px-4 md:px-8 border-t border-border bg-muted/20">
       <div className="max-w-6xl mx-auto">
         <FadeIn>
           <h2 className="text-3xl font-bold text-foreground mb-12">{content.heading}</h2>

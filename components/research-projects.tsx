@@ -11,7 +11,7 @@ export default function ResearchProjects({ content, locale }: ResearchProjectsPr
   const portfolioBase = locale === 'zh' ? '/portfolio' : `/${locale}/portfolio`
 
   return (
-    <section className="py-20 px-4 md:px-8 border-t border-border">
+    <section id="research" className="scroll-mt-20 py-20 px-4 md:px-8 border-t border-border">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-3 mb-12">
           <div className="p-2 rounded-xl bg-primary/10">

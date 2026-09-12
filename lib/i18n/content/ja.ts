@@ -6,7 +6,15 @@ export const ja = {
     portfolio: 'ポートフォリオ',
   },
   hero: {
-    tags: ['ブロックチェーン教育', 'ESGサステナビリティ', 'AI研究', 'フィンテック'],
+    tags: [
+      { label: '職務経歴', href: '#experience' },
+      { label: '研究プロジェクト', href: '#research' },
+      { label: 'コンペ・提案', href: '#competitions' },
+      { label: 'スキル', href: '#skills' },
+      { label: '学歴', href: '#education' },
+      { label: 'お問い合わせ', href: '#contact' },
+    ],
+    tagsLabel: 'セクションへ移動',
     name: '李科邑',
     title: '東呉大学 | 日本語言語学科（学士）× データサイエンス修士一貫課程',
     description:

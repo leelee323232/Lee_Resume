@@ -82,7 +82,7 @@ export default function ContactFormSection({ content, locale = 'zh' }: ContactFo
   }
 
   return (
-    <section className="py-20 px-4 md:px-8 border-t border-border bg-card/50">
+    <section id="contact" className="scroll-mt-20 py-20 px-4 md:px-8 border-t border-border bg-card/50">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left column — the invitation */}

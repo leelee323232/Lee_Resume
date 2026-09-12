@@ -6,7 +6,15 @@ export const en = {
     portfolio: 'Portfolio',
   },
   hero: {
-    tags: ['Blockchain Education', 'ESG Sustainability', 'AI Research', 'FinTech'],
+    tags: [
+      { label: 'Experience', href: '#experience' },
+      { label: 'Research', href: '#research' },
+      { label: 'Competitions', href: '#competitions' },
+      { label: 'Skills', href: '#skills' },
+      { label: 'Education', href: '#education' },
+      { label: 'Contact', href: '#contact' },
+    ],
+    tagsLabel: 'Jump to section',
     name: 'Lee Ko-Yi',
     title: 'Soochow University | B.A. Japanese Linguistics × Integrated M.S. Data Science',
     description:

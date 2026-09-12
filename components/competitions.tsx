@@ -6,7 +6,7 @@ interface CompetitionsProps {
 
 export default function Competitions({ content }: CompetitionsProps) {
   return (
-    <section className="py-20 px-4 md:px-8 bg-muted/20 border-t border-border">
+    <section id="competitions" className="scroll-mt-20 py-20 px-4 md:px-8 bg-muted/20 border-t border-border">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-foreground mb-12">{content.heading}</h2>
         <div className="relative">

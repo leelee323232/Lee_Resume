@@ -6,7 +6,15 @@ export const zh = {
     portfolio: '作品集',
   },
   hero: {
-    tags: ['區塊鏈教育', 'ESG 永續', 'AI 研究', '金融科技'],
+    tags: [
+      { label: '工作經驗', href: '#experience' },
+      { label: '研究專案', href: '#research' },
+      { label: '競賽與提案', href: '#competitions' },
+      { label: '技能', href: '#skills' },
+      { label: '教育背景', href: '#education' },
+      { label: '聯絡我', href: '#contact' },
+    ],
+    tagsLabel: '快速前往',
     name: '李科邑',
     title: '東吳大學｜日本語言學系學士 × 資料科學碩士五年一貫',
     description:
